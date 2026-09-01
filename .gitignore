@@ -5,6 +5,8 @@ node_modules
 out
 dist
 .next
+.open-next
+.wrangler
 *.tgz
 
 # code coverage

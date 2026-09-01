@@ -18,6 +18,27 @@ bun run lint
 bun run build
 ```
 
+## Deploy to Cloudflare Workers
+
+**Important:** keep `build` as `next build`. OpenNext calls that script internally — changing `build` to `opennextjs-cloudflare build` causes an infinite loop.
+
+Use these scripts instead:
+
+| Script | Purpose |
+|---|---|
+| `bun run build` | Standard Next.js build (local checks) |
+| `bun run cf:build` | OpenNext bundle for Cloudflare (`.open-next/`) |
+| `bun run deploy` | Build + deploy to Workers |
+
+In **Cloudflare dashboard → Worker → Settings → Builds**, set:
+
+| Setting | Value |
+|---|---|
+| **Build command** | `bun run cf:build` |
+| **Deploy command** | `bunx wrangler deploy` |
+
+Or use a single deploy step: `bun run deploy`
+
 ## Content architecture
 
 - `data/projects.ts` contains primary products and configurable archive projects.

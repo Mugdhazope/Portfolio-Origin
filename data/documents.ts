@@ -340,7 +340,7 @@ export const documents: StudioDocument[] = [
       },
       {
         label: "Thinkitive Technologies, Pune",
-        body: "Intern Software Engineer · Feb 2024 – Jul 2024\n\nReact enterprise dashboards, REST API integration, reusable components, and frontend-backend data flows.",
+        body: "Intern Software Engineer · Feb 2024 – Dec 2024\n\nReact enterprise dashboards, REST API integration, reusable components, and frontend-backend data flows.",
       },
       {
         label: "Bharat Intern",

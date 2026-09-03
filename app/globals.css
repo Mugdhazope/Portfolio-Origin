@@ -80,8 +80,8 @@ a:focus-visible {
   background-image:
     linear-gradient(90deg, rgba(6, 8, 9, 0.56), rgba(6, 8, 9, 0.12) 52%, rgba(6, 8, 9, 0.48)),
     linear-gradient(180deg, rgba(5, 7, 8, 0.14), rgba(5, 7, 8, 0.1) 50%, rgba(5, 7, 8, 0.54)),
-    url("/assets/wallpaper.png");
-  background-position: center;
+    url("/assets/new-bg.png");
+  background-position: center 32%;
   background-size: cover;
   filter: saturate(0.72) contrast(1.12);
   transform: scale(1.025);
@@ -89,7 +89,7 @@ a:focus-visible {
 
 @media (min-width: 1200px) {
   .desktop::before {
-    background-position: center 56%;
+    background-position: center 28%;
   }
 }
 
@@ -395,6 +395,8 @@ a:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 36%;
+  transform: scale(1.28);
 }
 
 .profile-studio {
@@ -1340,6 +1342,101 @@ a:focus-visible {
   line-height: 1.7;
 }
 
+.about-hero {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 22px 28px;
+  align-items: start;
+  margin: -6px 0 28px;
+}
+
+.document-portrait {
+  width: 160px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.document-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+  transform: scale(1.35);
+  filter: saturate(0.94) contrast(1.08) brightness(1.02);
+  mix-blend-mode: lighten;
+}
+
+.about-hero-copy {
+  min-width: 0;
+  padding-top: 4px;
+}
+
+.about-hero-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+}
+
+.about-hero-label small {
+  color: var(--faint);
+  font-size: 8px;
+}
+
+.about-hero-body {
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+.about-social-links,
+.contact-social-links,
+.profile-social-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.about-social-links {
+  margin-top: 18px;
+}
+
+.contact-social-links {
+  margin-top: 28px;
+  color: var(--muted);
+}
+
+.about-social-links a,
+.contact-social-links a,
+.profile-social-links a {
+  color: var(--faint);
+  transition: color 160ms ease;
+}
+
+.about-social-links a:hover,
+.contact-social-links a:hover,
+.profile-social-links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .document-portrait {
+    width: 140px;
+  }
+}
+
 .document-section {
   border-top: 1px solid var(--line);
 }
@@ -1390,6 +1487,16 @@ a:focus-visible {
   font-size: 10px;
   line-height: 1.8;
   white-space: pre-line;
+}
+
+.document-inline-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.document-inline-link:hover {
+  color: var(--ink);
 }
 
 .contact-window {

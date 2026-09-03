@@ -3,12 +3,14 @@
 import { ArrowUpRight, ChevronLeft, Download, ExternalLink, FileText, Mail } from "lucide-react";
 import Image from "next/image";
 import { ProjectArtwork } from "@/components/ProjectWindow";
+import { ProfileSocialLinks } from "@/components/ProfileSocialLinks";
 import { activeProjects, archiveProjects, primaryProjects, type Project } from "@/data/projects";
 import { collaborators, getCollaborator } from "@/data/collaborators";
 import { getDocument } from "@/data/documents";
 import { getResearchProject, researchProjects } from "@/data/research";
 import { origin4Positioning, personalLinks, resumeAsset } from "@/data/personal";
 import type { MobileApp } from "@/data/mobileApps";
+import { linkifyText } from "@/lib/linkifyText";
 
 export type MobileView =
   | { kind: "project"; project: Project }
@@ -153,6 +155,7 @@ function MobileProjectScreen({
 
 export function MobileDocumentScreen({ documentId, onBack }: { documentId: string; onBack: () => void }) {
   const document = getDocument(documentId);
+  const isAbout = documentId === "about";
   return (
     <ScreenFrame title={document?.filename ?? "Document"} eyebrow={document?.eyebrow} onBack={onBack}>
       {document ? (
@@ -160,11 +163,17 @@ export function MobileDocumentScreen({ documentId, onBack }: { documentId: strin
           <span className="mobile-kicker"><FileText size={13} /> {document.filename}</span>
           <h1>{document.title}</h1>
           <p className="mobile-document-intro">{document.intro}</p>
+          {isAbout ? (
+            <>
+              <Image className="mobile-portrait" src="/assets/mugdha-zope.png" alt="Mugdha Zope" width={420} height={420} />
+              <ProfileSocialLinks className="mobile-social-links" size={18} />
+            </>
+          ) : null}
           <div className="mobile-document-sections">
             {document.sections.map((section, index) => (
               <section className="mobile-document-section" key={section.label}>
                 <span>{String(index + 1).padStart(2, "0")} / {section.label}</span>
-                <p>{section.body}</p>
+                <p>{linkifyText(section.body)}</p>
               </section>
             ))}
           </div>
@@ -187,11 +196,7 @@ function MobileAboutScreen({ onBack }: { onBack: () => void }) {
         </p>
         <div className="mobile-link-list">
           <span>ORIGIN4 / {origin4Positioning.kicker}</span>
-          {personalLinks.emails.map((email) => (
-            <a key={email} href={`mailto:${email}`}>{email} <ArrowUpRight size={14} /></a>
-          ))}
-          {personalLinks.linkedin ? <a href={personalLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14} /></a> : null}
-          {personalLinks.instagram ? <a href={personalLinks.instagram} target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={14} /></a> : null}
+          <ProfileSocialLinks className="mobile-social-links" size={18} />
         </div>
       </article>
     </ScreenFrame>
@@ -204,19 +209,8 @@ function MobileContactScreen({ onBack }: { onBack: () => void }) {
       <article className="mobile-contact-content">
         <span className="mobile-kicker"><span className="status-dot" /> AVAILABLE FOR NEW PROJECTS</span>
         <h1>Let&apos;s build<br /><em>something.</em></h1>
-        <p>Have a project, idea, weird thought, or problem worth solving? Put it in an email — that&apos;s the best place to start.</p>
-        <div className="mobile-contact-emails">
-          {personalLinks.emails.map((email) => (
-            <a key={email} className="mobile-contact-email" href={`mailto:${email}`}>
-              {email} <ArrowUpRight size={18} />
-            </a>
-          ))}
-          {personalLinks.linkedin ? (
-            <a className="mobile-contact-email" href={personalLinks.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn <ArrowUpRight size={18} />
-            </a>
-          ) : null}
-        </div>
+        <p>Have a project, idea, weird thought, or problem worth solving? Reach out over email, LinkedIn, or GitHub.</p>
+        <ProfileSocialLinks className="mobile-social-links" size={20} />
         <a className="mobile-action mobile-action--accent" href={`mailto:${personalLinks.email}`}>
           EMAIL ME <Mail size={14} />
         </a>

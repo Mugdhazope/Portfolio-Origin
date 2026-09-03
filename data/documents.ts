@@ -1,5 +1,3 @@
-import { personalLinks } from "./personal";
-
 export type DocumentId =
   | "about"
   | "approach"
@@ -42,7 +40,7 @@ export const documents: StudioDocument[] = [
     sections: [
       {
         label: "Mugdha Zope",
-        body: "Software Engineer · Product Designer\n\nBuilding digital products, systems, and experiments with curiosity and care.\n\nLinkedIn — https://www.linkedin.com/in/mugdha-zope/",
+        body: "Software Engineer · Product Designer\n\nBuilding digital products, systems, and experiments with curiosity and care.",
       },
       {
         label: "Practice",
@@ -377,8 +375,7 @@ export const documents: StudioDocument[] = [
     title: "Say hello.",
     intro: "For projects, research, or anything worth building.",
     sections: [
-      { label: "Email", body: personalLinks.emails.join("\n") },
-      { label: "LinkedIn", body: personalLinks.linkedin },
+      { label: "Reach out", body: "LinkedIn, GitHub, or email — use the icons in Contact / About." },
     ],
   },
 ];

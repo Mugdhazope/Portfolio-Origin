@@ -54,7 +54,9 @@ The UI hides optional links when their data is empty.
 
 ## Assets
 
-- Supplied forest wallpaper: `public/assets/wallpaper.png`
+- Desktop / tablet wallpaper: `public/assets/new-bg.png`
+- Phone wallpaper: `public/assets/bg-for-phone.png`
+- Portrait: `public/assets/mugdha-zope.png`
 - Supplied Mugdha portrait: `public/assets/mugdha-zope.png`
 - Optional project/research/collaborator media: `public/projects/` or `public/assets/`
 - Approved resume PDF: stage at `public/assets/resume.pdf`, then set `resumeAsset` in

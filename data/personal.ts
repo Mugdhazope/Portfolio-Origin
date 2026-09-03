@@ -5,7 +5,7 @@ export const personalLinks = {
   emails: [...personalEmails],
   linkedin: "https://www.linkedin.com/in/mugdha-zope/",
   instagram: "",
-  github: "",
+  github: "https://github.com/Mugdhazope",
 };
 
 export const resumeAsset = "/assets/resume/Mugdha_resume2026-2.pdf";

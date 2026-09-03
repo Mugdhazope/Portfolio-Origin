@@ -5,14 +5,11 @@ import { MotionConfig, motion } from "framer-motion";
 import Image from "next/image";
 import {
   ArrowDown,
-  AtSign,
   Compass,
   FileText,
   FolderOpen,
   Home,
-  Camera,
   Mail,
-  Network,
   PanelsTopLeft,
   Route,
   RotateCcw,
@@ -44,9 +41,10 @@ import { ResearchWindow } from "@/components/ResearchWindow";
 import { CollaboratorWindow } from "@/components/CollaboratorWindow";
 import { ResumeWindow } from "@/components/ResumeWindow";
 import { DocumentationWindow } from "@/components/DocumentationWindow";
+import { ProfileSocialLinks } from "@/components/ProfileSocialLinks";
 import { collaborators, getCollaborator } from "@/data/collaborators";
 import { getResearchProject, researchProjects } from "@/data/research";
-import { origin4Positioning, personalLinks } from "@/data/personal";
+import { origin4Positioning } from "@/data/personal";
 import {
   useWindowManager,
   type DirectoryId,
@@ -386,11 +384,7 @@ export function Desktop() {
                 <span className="profile-role">Software Engineer · Product Designer</span>
               </span>
             </button>
-            <div className="profile-links">
-              {personalLinks.linkedin ? <a href={personalLinks.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Network size={13} /></a> : null}
-              {personalLinks.instagram ? <a href={personalLinks.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"><Camera size={13} /></a> : null}
-              <a href={`mailto:${personalLinks.email}`} aria-label="Email"><AtSign size={13} /></a>
-            </div>
+            <ProfileSocialLinks className="profile-links" size={13} />
           </section>
         </DesktopObject>
 

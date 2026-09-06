@@ -336,7 +336,7 @@ export const documents: StudioDocument[] = [
       },
       {
         label: "Vervelo",
-        body: "Software Engineer · Jan 2025 – Present\n\nBackend systems across client projects using Python/Django and Java/Spring Boot — healthcare REST APIs, Redis caching, authentication, RBAC, AWS EC2 deployment, and production troubleshooting.",
+        body: "Software Engineer · Jan 2025 – Jan 2026\n\nBackend systems across client projects using Python/Django and Java/Spring Boot — healthcare REST APIs, Redis caching, authentication, RBAC, AWS EC2 deployment, and production troubleshooting.",
       },
       {
         label: "Thinkitive Technologies, Pune",

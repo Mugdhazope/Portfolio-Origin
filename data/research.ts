@@ -82,6 +82,27 @@ export const researchProjects: ResearchProject[] = [
     notes: [],
   },
   {
+    id: "relayai",
+    name: "RELAYAI",
+    category: "AI / Multi-Agent Automation",
+    description:
+      "A multi-agent AI automation platform built with Python, FastAPI, LangChain, CrewAI, and LLM APIs. Specialized agents orchestrate support work with tool and function calling, RAG, vector search, external REST APIs, structured outputs, asynchronous workflows, task delegation, retries, and failure handling.",
+    technologies: ["Python", "FastAPI", "LangChain", "CrewAI", "LLM APIs"],
+    topics: [
+      "Tool and function calling",
+      "RAG",
+      "Vector search",
+      "External REST APIs",
+      "Structured outputs",
+      "Asynchronous workflows",
+      "Task delegation",
+      "Retries and failure handling",
+    ],
+    status: "experimental",
+    links: [],
+    notes: [],
+  },
+  {
     id: "rig-veda",
     name: "RIG VEDA 3D EXPLORER",
     category: "Research / 3D Web Experience / AI Search",

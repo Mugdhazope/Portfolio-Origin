@@ -1,7 +1,7 @@
 "use client";
 
 import { ExternalLink, FileText } from "lucide-react";
-import type { ResearchProject } from "@/data/research";
+import { researchProjects, type ResearchProject } from "@/data/research";
 
 type ResearchWindowProps = {
   research: ResearchProject;
@@ -20,7 +20,7 @@ export function ResearchWindow({ research, onOpenNotes }: ResearchWindowProps) {
         </span>
       </div>
       <div className="research-heading">
-        <span className="project-number">R{research.id === "origin-timer" ? "03" : research.id === "coderevival" ? "02" : "01"}</span>
+        <span className="project-number">R{String(Math.max(researchProjects.findIndex((item) => item.id === research.id) + 1, 1)).padStart(2, "0")}</span>
         <h3>{research.name}</h3>
         <p>{research.category}</p>
       </div>

@@ -44,7 +44,7 @@ export const documents: StudioDocument[] = [
       },
       {
         label: "Practice",
-        body: "Workplace and operations systems — building tools like Mesh that run day-to-day business in one place.\nRestaurant and digital menu platforms — Morph and the craft of making hospitality software feel human.\nMobile social products — Hiuen and the messiness of real-world connection.\nSystems and security research — Lind-Wasm, sandboxing, and POSIX in WebAssembly.\nAutomated code recovery — CodeRevival and VersionClimber for reviving legacy repositories.\n3D and AI experiences — Rig Veda and experiments at the edge of text, space, and search.\nBrand and web experiences — BRWNIE, PLEVID, and smaller sites that still need a point of view.\nThe occasional experiment that does not fit anywhere else.",
+        body: "Workplace and operations systems — building tools like Mesh that run day-to-day business in one place.\nRestaurant and digital menu platforms — Morph and the craft of making hospitality software feel human.\nMobile social products — Hiuen and the messiness of real-world connection.\nSystems and security research — Lind-Wasm, sandboxing, and POSIX in WebAssembly.\nAutomated code recovery — CodeRevival and VersionClimber for reviving legacy repositories.\nMulti-agent AI — RelayAI, specialized agents, RAG, and tool calling.\n3D and AI experiences — Rig Veda and experiments at the edge of text, space, and search.\nBrand and web experiences — BRWNIE, PLEVID, and smaller sites that still need a point of view.\nThe occasional experiment that does not fit anywhere else.",
       },
       {
         label: "Origin",

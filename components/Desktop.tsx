@@ -659,7 +659,7 @@ function getDirectoryEntries(directoryId: DirectoryId): FinderEntry[] {
       name: research.name,
       detail: research.category,
       kind: "research" as const,
-      accent: research.id === "origin-timer" ? "#f1a64a" : "#a9bcff",
+      accent: research.id === "origin-timer" ? "#f1a64a" : research.id === "relayai" ? "#8ee0c2" : "#a9bcff",
     }));
   }
 

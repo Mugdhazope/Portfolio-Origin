@@ -114,14 +114,14 @@ export const mobilePages: MobileApp[][] = [
       accent: "#8fc5b4",
       documentId: "approach",
     },
-    {
-      id: "resume",
-      label: "RESUME",
-      subtitle: "Professional record",
-      kind: "resume",
-      glyph: "resume",
-      accent: "#d8d2bd",
-    },
+    // {
+    //   id: "resume",
+    //   label: "RESUME",
+    //   subtitle: "Professional record",
+    //   kind: "resume",
+    //   glyph: "resume",
+    //   accent: "#d8d2bd",
+    // },
   ],
   [
     {
@@ -171,12 +171,12 @@ export const mobileDockApps: MobileApp[] = [
     glyph: "contact",
     accent: "#c8ee3d",
   },
-  {
-    id: "resume-dock",
-    label: "RESUME",
-    subtitle: "Professional record",
-    kind: "resume",
-    glyph: "resume",
-    accent: "#d8d2bd",
-  },
+  // {
+  //   id: "resume-dock",
+  //   label: "RESUME",
+  //   subtitle: "Professional record",
+  //   kind: "resume",
+  //   glyph: "resume",
+  //   accent: "#d8d2bd",
+  // },
 ];

@@ -20,5 +20,5 @@ export const navigationItems: Array<{
   { id: "experience", label: "Experience", description: "View work history" },
   { id: "approach", label: "Approach", description: "Practice and method" },
   { id: "contact", label: "Contact", description: "Start a conversation" },
-  { id: "resume", label: "Resume", description: "Open resume viewer" },
+  // { id: "resume", label: "Resume", description: "Open resume viewer" },
 ];

@@ -430,7 +430,7 @@ export function Desktop() {
           <DesktopFile id="about-file" filename="about.txt" icon={<FileText size={13} />} position={layout["about-file"]} constraintsRef={constraintsRef} onFocus={focusObject} onMove={moveObject} onOpen={() => openDocument("about")} />
           <DesktopFile id="experience-file" filename="experience.txt" icon={<FileText size={13} />} position={layout["experience-file"]} constraintsRef={constraintsRef} onFocus={focusObject} onMove={moveObject} onOpen={() => openDocument("experience")} />
           <DesktopFile id="approach-file" filename="approach.txt" icon={<Compass size={13} />} position={layout["approach-file"]} constraintsRef={constraintsRef} onFocus={focusObject} onMove={moveObject} onOpen={() => openDocument("approach")} />
-          <DesktopFile id="resume-file" filename="resume.pdf" icon={<FileText size={13} />} position={layout["resume-file"]} constraintsRef={constraintsRef} onFocus={focusObject} onMove={moveObject} onOpen={openResume} />
+          {/* <DesktopFile id="resume-file" filename="resume.pdf" icon={<FileText size={13} />} position={layout["resume-file"]} constraintsRef={constraintsRef} onFocus={focusObject} onMove={moveObject} onOpen={openResume} /> */}
           <DesktopFile id="contact-file" filename="contact.txt" icon={<Mail size={13} />} position={layout["contact-file"]} constraintsRef={constraintsRef} onFocus={focusObject} onMove={moveObject} onOpen={() => openDocument("contact")} />
           <DesktopFile id="manifesto-file" filename="manifesto.txt" icon={<SparkIcon />} position={layout["manifesto-file"]} constraintsRef={constraintsRef} onFocus={focusObject} onMove={moveObject} onOpen={() => openDocument("manifesto")} />
         </section>
